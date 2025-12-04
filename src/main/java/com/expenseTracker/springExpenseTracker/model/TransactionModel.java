@@ -2,25 +2,28 @@ package com.expenseTracker.springExpenseTracker.model;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import org.springframework.cglib.core.Local;
+import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-public class ExpenseModel {
+@Table
+public class TransactionModel {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column
     private Integer id;
 
-    private LocalDate date;
+    @Column
+    @DateTimeFormat(pattern = "dd.MM.yyyy")
+    private LocalDate Date;
 
+    @Column
     private String description;
 
+    @Column
     private double amount;
 
+    //setter/getter methods
     public Integer getId(){
         return id;
     }
@@ -30,11 +33,11 @@ public class ExpenseModel {
     }
 
     public LocalDate getDate() {
-        return date;
+        return Date;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setDate(LocalDate expenseDate) {
+        this.Date = expenseDate;
     }
 
     public String getDescription() {

@@ -1,9 +1,10 @@
 services:
   mysql:
+    container_name: 'expenseModel'
     image: 'mariadb:latest'
     environment:
-      - 'MYSQL_DATABASE=host'
-      - 'MYSQL_PASSWORD='
+      - 'MYSQL_DATABASE=localhost'
+      - 'MYSQL_PASSWORD=12345'
       - 'MYSQL_ROOT_PASSWORD=12345'
       - 'MYSQL_USER=root'
     ports:
