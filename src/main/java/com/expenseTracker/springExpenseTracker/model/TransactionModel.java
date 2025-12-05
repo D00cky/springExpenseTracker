@@ -2,20 +2,19 @@ package com.expenseTracker.springExpenseTracker.model;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table
 public class TransactionModel {
 
     @Id
-    @Column
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @Column
-    @DateTimeFormat(pattern = "dd.MM.yyyy")
-    private LocalDate Date;
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+    private LocalDate date;
 
     @Column
     private String description;
@@ -33,11 +32,11 @@ public class TransactionModel {
     }
 
     public LocalDate getDate() {
-        return Date;
+        return date;
     }
 
-    public void setDate(LocalDate expenseDate) {
-        this.Date = expenseDate;
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
     public String getDescription() {

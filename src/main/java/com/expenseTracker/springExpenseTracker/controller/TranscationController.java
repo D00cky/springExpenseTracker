@@ -2,11 +2,12 @@ package com.expenseTracker.springExpenseTracker.controller;
 
 import com.expenseTracker.springExpenseTracker.model.TransactionModel;
 import com.expenseTracker.springExpenseTracker.service.TransactionService;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cglib.core.Local;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import com.expenseTracker.springExpenseTracker.repository.TransactionRepository;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -35,12 +36,15 @@ public class TranscationController {
 
     }
 
-    @PostMapping("/transaction")
+    @PostMapping("/transactions")
     public void addTransaction(@RequestBody TransactionModel transactionModel) {
-
+        transactionService.saveOrUpdate(transactionModel);
+        if (transactionModel.getDate() == null) {
+            transactionModel.setDate(LocalDate.now());
+        }
     }
 
-    @PutMapping("/transaction")
+    @PutMapping("/transactions")
     public void updateTransaction(@RequestBody TransactionModel transactionModel) {
 
     }
