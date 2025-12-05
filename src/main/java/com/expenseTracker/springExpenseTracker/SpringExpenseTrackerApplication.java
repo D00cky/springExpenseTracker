@@ -7,10 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Component;
 
-@ComponentScan({"com.expenseTracker.springExpenseTracker.controller",
-        "com.expenseTracker.springExpenseTracker.service"})
-@EntityScan("com.expenseTracker.springExpenseTracker.model")
-@EnableJpaRepositories("com.expenseTracker.springExpenseTracker.repository")
+
 @SpringBootApplication
 public class SpringExpenseTrackerApplication {
 
