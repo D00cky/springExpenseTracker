@@ -6,7 +6,7 @@
 
 ## 📋 Sobre o Projeto
 
-O **Expense Tracker** é uma API RESTful desenvolvida para auxiliar no controle financeiro pessoal. O objetivo principal deste projeto foi consolidar os fundamentos do desenvolvimento Backend com **Java** e **Spring Boot**, focando em boas práticas de arquitetura e código limpo.
+O **Expense Tracker** é meu primeiro projeto de uma APIRestful usando Java e SpringBoot
 
 Este projeto serviu como base para meus estudos em:
 - Estruturação de projetos em camadas (Controller, Service, Repository).
