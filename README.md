@@ -51,6 +51,7 @@ A aplicação estará rodando em: http://localhost:8080
 
 ## ⚡ Endpoints da API
 
+```bash
 Criar Transação (POST)
 curl -X POST http://localhost:8080/index/transactions
 -H "Content-Type: application/json" \
