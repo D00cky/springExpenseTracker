@@ -4,9 +4,6 @@ import com.expenseTracker.springExpenseTracker.model.TransactionModel;
 import com.expenseTracker.springExpenseTracker.service.TransactionService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.core.Local;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -14,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path="/index")
-public class TranscationController {
+public class TransactionController {
 
     @Autowired
     TransactionService transactionService;
