@@ -18,9 +18,9 @@ Este projeto serviu como base para meus estudos em:
 
 - **Linguagem:** Java 17 (ou superior)
 - **Framework:** Spring Boot 3
-- **Gerenciador de Dependências:** Maven (ou Gradle, ajuste aqui)
-- **Banco de Dados:** H2 Database (ou MySQL/PostgreSQL, ajuste aqui)
-- **Ferramentas:** Git, Insomnia/Postman
+- **Gerenciador de Dependências:** Maven
+- **Banco de Dados:** Utilizado H2 Database para fins de testes rapidos na memoria
+- **Ferramentas:** Git/Postman
 
 ## ⚙️ Funcionalidades
 
