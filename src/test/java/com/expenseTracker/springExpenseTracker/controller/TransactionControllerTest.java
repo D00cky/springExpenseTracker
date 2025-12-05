@@ -22,6 +22,6 @@ public class TransactionControllerTest {
 
     @Test
     public void testGetAllTransatcions() throws Exception {
-        TransactionModel transactionModel = getTransaction();
+        TransactionModel transactionModel;
     }
 }
