@@ -36,7 +36,21 @@ Este projeto serviu como base para meus estudos em:
 ### Pré-requisitos
 Certifique-se de ter o **Java JDK 17+** e o **Maven** instalados em sua máquina.
 
-##⚡Endpoints da API
+```bash
+# Clone este repositório
+git clone https://github.com/D00cky/springExpenseTracker.git
+
+# Entre na pasta do projeto
+cd springExpenseTracker
+
+# Compile e execute o projeto (Via terminal Linux)
+./mvnw spring-boot:run
+
+A aplicação estará rodando em: http://localhost:8080
+```
+
+## ⚡ Endpoints da API
+
 Criar Transação (POST)
 curl -X POST http://localhost:8080/index/transactions
 -H "Content-Type: application/json" \
@@ -56,17 +70,6 @@ curl -X PUT http://localhost:8080/index/transactions/{id}
 -H "Content-Type: application/json" \
 -d '{"description": "Mercado - Compra Mensal", "amount": 200.00, "date": "2023-10-28"}'
 
-```bash
-# Clone este repositório
-git clone https://github.com/D00cky/springExpenseTracker.git
-
-# Entre na pasta do projeto
-cd springExpenseTracker
-
-# Compile e execute o projeto (Via terminal Linux)
-./mvnw spring-boot:run
-
-A aplicação estará rodando em: http://localhost:8080
 
 
 
